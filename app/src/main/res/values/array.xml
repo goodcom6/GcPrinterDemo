@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="density">
+        <item>Density 1</item>
+        <item>Density 2</item>
+        <item>Density 3</item>
+        <item>Density 4</item>
+        <item>Density 5</item>
+        <item>Density 6</item>
+        <item>Density 7</item>
+        <item>Density 8</item>
+        <item>Density 9</item>
+        <item>Density 10</item>
+    </string-array>
+    
+    <string-array name="speed">
+        <item>Speed 1</item>
+        <item>Speed 2</item>
+        <item>Speed 3</item>
+        <item>Speed 4</item>
+        <item>Speed 5</item>
+        <item>Speed 6</item>
+        <item>Speed 7</item>
+        <item>Speed 8</item>
+        <item>Speed 9</item>
+        <item>Speed 10</item>
+    </string-array>
+    <string-array name="fontType">
+        <item>GcFont I</item>
+        <item>GcFont II</item>
+        <item>System Font</item>
+    </string-array>
+    <string-array name="fontSize">
+        <item>Small Font</item>
+        <item>Small Bold</item>
+        <item>Medium Font</item>        
+        <item>Big Font</item>
+        <item>Double Height</item>
+        <item>Double Width</item>
+    </string-array>
+</resources>
