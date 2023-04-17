@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.goodcom.gcprinter.GCAndroidPrint;
 import com.goodcom.gcprinter.GcPrinterUtils;
 
 import android.Manifest;
@@ -28,7 +27,6 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
@@ -42,11 +40,15 @@ public class GcPrinterDemo extends Activity {
     EditText mTvItem1Number;
     EditText mTvItem1Name;
     EditText mTvItem1Amt;
-    EditText mTvItem1OptName;
-    EditText mTvItem1OptAmt;
+    EditText mTvItem1Opt1Name;
+    EditText mTvItem1Opt1Amt;
+    EditText mTvItem1Opt2Name;
+    EditText mTvItem1Opt2Amt;
     EditText mTvItem2Number;
     EditText mTvItem2Name;
     EditText mTvItem2Amt;
+    EditText mTvItem2Opt1Name;
+    EditText mTvItem2Opt1Amt;
     EditText mTvBarcode;
     Button mBtnBmp;
 
@@ -62,8 +64,12 @@ public class GcPrinterDemo extends Activity {
         mTvItem2Number =findViewById(R.id.item2_left);
         mTvItem2Name =findViewById(R.id.item2_mid);
         mTvItem2Amt =findViewById(R.id.item2_right);
-        mTvItem1OptName =findViewById(R.id.item1_opt_name);
-        mTvItem1OptAmt =findViewById(R.id.item1_opt_amt);
+        mTvItem1Opt1Name =findViewById(R.id.item1_opt1_name);
+        mTvItem1Opt1Amt =findViewById(R.id.item1_opt1_amt);
+        mTvItem1Opt2Name = findViewById(R.id.item1_opt2_name);
+        mTvItem1Opt2Amt = findViewById(R.id.item1_opt2_amt);
+        mTvItem2Opt1Name = findViewById(R.id.item2_opt1_name);
+        mTvItem2Opt1Amt = findViewById(R.id.item2_opt1_amt);
         mTvBarcode=findViewById(R.id.barcode);
 
         mEdText = findViewById(R.id.ed_text);
@@ -81,14 +87,16 @@ public class GcPrinterDemo extends Activity {
                 GcPrinterUtils.drawText(mTvItem1Number.getText().toString(),GcPrinterUtils.fontSmallBold,
                         mTvItem1Name.getText().toString(),GcPrinterUtils.fontSmallBold,
                         mTvItem1Amt.getText().toString(),GcPrinterUtils.fontSmallBold);
-                GcPrinterUtils.drawLeftRight(mTvItem1OptName.getText().toString(),0,
-                        mTvItem1OptAmt.getText().toString(),0);
-                GcPrinterUtils.drawLeftRight(mTvItem1OptName.getText()+" test2".toString(),0,
-                        mTvItem1OptAmt.getText().toString(),0);
+                GcPrinterUtils.drawLeftRight(mTvItem1Opt1Name.getText().toString(),0,
+                        mTvItem1Opt1Amt.getText().toString(),0);
+                GcPrinterUtils.drawLeftRight(mTvItem1Opt2Name.getText().toString(),0,
+                        mTvItem1Opt2Amt.getText().toString(),0);
                 GcPrinterUtils.drawNewLine();
                 GcPrinterUtils.drawText(mTvItem2Number.getText().toString(),GcPrinterUtils.fontSmallBold,
                         mTvItem2Name.getText().toString(),GcPrinterUtils.fontSmallBold,
                         mTvItem2Amt.getText().toString(),GcPrinterUtils.fontSmallBold);
+                GcPrinterUtils.drawLeftRight(mTvItem2Opt1Name.getText().toString(),0,
+                        mTvItem2Opt1Amt.getText().toString(),0);
                 GcPrinterUtils.drawNewLine();
                 GcPrinterUtils.drawBarcode(mTvBarcode.getText().toString(),GcPrinterUtils.alignCenter,GcPrinterUtils.barcodeQrCode);
                 GcPrinterUtils.drawOneLine();
